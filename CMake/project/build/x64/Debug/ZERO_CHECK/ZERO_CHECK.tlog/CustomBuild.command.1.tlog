@@ -1,0 +1,10 @@
+^C:\USERS\GRIAS\DOCUMENTS\GITHUB\PROJECT\BUILD\CMAKEFILES\1377B389CF0CC5564CC8560ADEC215DC\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/grias/Documents/GitHub/project -BC:/Users/grias/Documents/GitHub/project/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/grias/Documents/GitHub/project/build/project.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
