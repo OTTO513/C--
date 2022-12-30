@@ -2,15 +2,16 @@
 using namespace std;
 
 
-struct Node {
-    int data;
+class Node {
+public:
     Node* next, * prev;
+    int data;
 };
 
-class List {
+class List:public Node{
 public:
     
-    Node* head, * tail;
+   
     List();
     void getElem(int p = 0);
     void Del(int p = 0);
@@ -18,10 +19,12 @@ public:
     void Display();
     void addTail(int n);
     void addHead(int n);
+    friend ostream& operator << (ostream& os, List& s);
     int get_count() {
         return count;
     }
 private:
+    Node* head, * tail;
     int count;
 };
 
